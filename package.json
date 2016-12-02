@@ -1,7 +1,7 @@
 {
-  "name": "react-hello",
+  "name": "react-weatherapp",
   "version": "1.0.0",
-  "description": "learn react with hello world",
+  "description": "Weather app in react",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,7 +11,8 @@
   "dependencies": {
     "express": "^4.14.0",
     "react": "^15.4.1",
-    "react-dom": "^15.4.1"
+    "react-dom": "^15.4.1",
+    "react-router": "^3.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.18.2",

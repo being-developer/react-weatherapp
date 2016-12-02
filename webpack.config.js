@@ -1,15 +1,17 @@
 module.exports = {
-  entry : './public/app.jsx',
+  entry : './app/app.jsx',
   output :{
     path:__dirname,
     filename:'./public/bundle.js'
   },
   resolve:{
-    root:__dirname
-    ,alias:{
-      Greeter:'public/component/Greeter.jsx',
-      GreeterMessage:'public/component/GreeterMessage.jsx',
-      GreeterForm:'public/component/GreeterForm.jsx',
+    root:__dirname,
+    alias:{
+      Main:'app/component/Main.jsx',
+      Nav:'app/component/Nav.jsx',
+      About:'app/component/About.jsx',
+      Weather:'app/component/Weather.jsx',
+      Example:'app/component/Example.jsx'
     },
     extensions:['','.js','.jsx']
   }
