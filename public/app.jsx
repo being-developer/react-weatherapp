@@ -1,6 +1,6 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-var Greeter = require('./component/Greeter')
+var Greeter = require('Greeter')
 
 
 

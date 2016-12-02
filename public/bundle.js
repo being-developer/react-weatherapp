@@ -48,77 +48,8 @@
 
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(32);
-	var GreeterMessage = __webpack_require__(178);
+	var Greeter = __webpack_require__(178);
 
-	var GreeterForm = React.createClass({
-	  displayName: 'GreeterForm',
-
-	  onFormSubmit: function onFormSubmit(e) {
-	    e.preventDefault();
-	    var nameRef = this.refs.name;
-	    var messageRef = this.refs.message;
-	    var name = nameRef.value;
-	    var message = messageRef.value;
-	    var updates = {};
-	    if (name.length > 0) {
-	      this.refs.name.value = "";
-	      updates.name = name;
-	    }
-	    if (message.length > 0) {
-	      this.refs.message.value = "";
-	      updates.message = message;
-	    }
-	    this.props.onNewName(updates);
-	  },
-	  render: function render() {
-	    return React.createElement(
-	      'form',
-	      { onSubmit: this.onFormSubmit },
-	      React.createElement('input', { type: 'text', ref: 'name', placeholder: 'Enter name' }),
-	      React.createElement('textarea', { ref: 'message', placeholder: 'Enter Message' }),
-	      React.createElement(
-	        'button',
-	        null,
-	        'Set Name'
-	      )
-	    );
-	  }
-	});
-	var Greeter = React.createClass({
-	  displayName: 'Greeter',
-
-	  getDefaultProps: function getDefaultProps() {
-	    return { name: "Subhash", message: "this is Default Message" };
-	  },
-	  getInitialState: function getInitialState() {
-	    return {
-	      name: this.props.name,
-	      message: this.props.message
-	    };
-	  },
-	  handleNewName: function handleNewName(updates) {
-	    this.setState(updates);
-	  },
-	  render: function render() {
-	    // only return 1 root here only <div>
-	    // for example code below give error
-	    // return (
-	    //   <div>
-	    //     <h1>Hello World ! I m using React</h1>
-	    //     <p>this is from React Component from asdadasd!</p>
-	    //   </div>
-	    //   <div>adasdad</div>
-	    // );
-	    var name = this.state.name;
-	    var message = this.state.message;
-	    return React.createElement(
-	      'div',
-	      null,
-	      React.createElement(GreeterMessage, { name: name, message: message }),
-	      React.createElement(GreeterForm, { onNewName: this.handleNewName })
-	    );
-	  }
-	});
 	var firstname = "Subhash";
 	ReactDOM.render(React.createElement(Greeter, null), document.getElementById('app'));
 
@@ -21537,6 +21468,53 @@
 
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(32);
+	var GreeterMessage = __webpack_require__(179);
+	var GreeterForm = __webpack_require__(180);
+	var Greeter = React.createClass({
+	  displayName: 'Greeter',
+
+	  getDefaultProps: function getDefaultProps() {
+	    return { name: "Subhash", message: "this is Default Message" };
+	  },
+	  getInitialState: function getInitialState() {
+	    return {
+	      name: this.props.name,
+	      message: this.props.message
+	    };
+	  },
+	  handleNewName: function handleNewName(updates) {
+	    this.setState(updates);
+	  },
+	  render: function render() {
+	    // only return 1 root here only <div>
+	    // for example code below give error
+	    // return (
+	    //   <div>
+	    //     <h1>Hello World ! I m using React</h1>
+	    //     <p>this is from React Component from asdadasd!</p>
+	    //   </div>
+	    //   <div>adasdad</div>
+	    // );
+	    var name = this.state.name;
+	    var message = this.state.message;
+	    return React.createElement(
+	      'div',
+	      null,
+	      React.createElement(GreeterMessage, { name: name, message: message }),
+	      React.createElement(GreeterForm, { onNewName: this.handleNewName })
+	    );
+	  }
+	});
+	module.exports = Greeter;
+
+/***/ },
+/* 179 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+	var ReactDOM = __webpack_require__(32);
 	var GreeterMessage = React.createClass({
 	  displayName: 'GreeterMessage',
 
@@ -21562,6 +21540,50 @@
 	});
 
 	module.exports = GreeterMessage;
+
+/***/ },
+/* 180 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+	var ReactDOM = __webpack_require__(32);
+	var GreeterForm = React.createClass({
+	  displayName: 'GreeterForm',
+
+	  onFormSubmit: function onFormSubmit(e) {
+	    e.preventDefault();
+	    var nameRef = this.refs.name;
+	    var messageRef = this.refs.message;
+	    var name = nameRef.value;
+	    var message = messageRef.value;
+	    var updates = {};
+	    if (name.length > 0) {
+	      this.refs.name.value = "";
+	      updates.name = name;
+	    }
+	    if (message.length > 0) {
+	      this.refs.message.value = "";
+	      updates.message = message;
+	    }
+	    this.props.onNewName(updates);
+	  },
+	  render: function render() {
+	    return React.createElement(
+	      'form',
+	      { onSubmit: this.onFormSubmit },
+	      React.createElement('input', { type: 'text', ref: 'name', placeholder: 'Enter name' }),
+	      React.createElement('textarea', { ref: 'message', placeholder: 'Enter Message' }),
+	      React.createElement(
+	        'button',
+	        null,
+	        'Set Name'
+	      )
+	    );
+	  }
+	});
+	module.exports = GreeterForm;
 
 /***/ }
 /******/ ]);
