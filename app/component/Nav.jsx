@@ -1,7 +1,6 @@
 var React = require('react');
 var {Link} = require('react-router')
-var Nav= React.createClass({
-  render:function(){
+var Nav= ()=>{
     return (
       <div>
       <h1>Nav Component</h1>
@@ -10,6 +9,5 @@ var Nav= React.createClass({
       <Link to="/examples"> Example</Link>
       </div>
   );
-  }
-})
+};
 module.exports = Nav;

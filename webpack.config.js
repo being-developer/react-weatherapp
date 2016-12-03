@@ -11,6 +11,9 @@ module.exports = {
       Nav:'app/component/Nav.jsx',
       About:'app/component/About.jsx',
       Weather:'app/component/Weather.jsx',
+      WeatherForm:'app/component/WeatherForm.jsx',
+      WeatherMessage:'app/component/WeatherMessage.jsx',
+      WeatherAPI:'app/api/WeatherAPI.jsx',
       Example:'app/component/Example.jsx'
     },
     extensions:['','.js','.jsx']
@@ -27,4 +30,5 @@ module.exports = {
       }
     ]
   }
+  ,devtool:'cheap-module-eval-source-map'
 }
