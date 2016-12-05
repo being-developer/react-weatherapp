@@ -13,7 +13,7 @@ var Weather= React.createClass({
     this.setState({
       isLoading:true
     })
-    debugger;
+    // debugger;
     WeatherAPI.getTemp(location).then(function(temp){
       that.setState({
         location:location
